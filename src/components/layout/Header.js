@@ -9,7 +9,6 @@ import { useNavigate } from "react-router-dom";
 import { Snackbar, Alert, Slide } from "@mui/material";
 import Logo_light from "../../../src/assets/logo_ligt.png";
 import Logo_dark from "../../../src/assets/logo_dar.png";
-import { AppBar, Toolbar, Typography } from "@mui/material";
 import { NavLink } from "react-router-dom";
 
 function SlideTransition(props) {
@@ -40,7 +39,7 @@ const Header = ({ username }) => {
   return (
     <React.Fragment>
       <header className={headerClass}>
-        {theme == "light" ? (
+        {theme === "light" ? (
           <img
             src={Logo_dark}
             alt="Company Logo"

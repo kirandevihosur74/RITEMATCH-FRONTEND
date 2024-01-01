@@ -4,23 +4,14 @@ import TextField from "@mui/material/TextField";
 import {
   Paper,
   Grid,
-  CircularProgress,
   Pagination,
-  Dialog,
-  DialogTitle,
-  DialogContent,
-  DialogContentText,
-  DialogActions,
   Button,
-  IconButton,
-  Tooltip,
 } from "@mui/material";
-import { Box, Card, CardContent, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import "./JobScore.module.css";
 import { useTheme } from "../layout/ThemeContext";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
-import CircularProgressWithLabel from "../layout/CircularProgressWithLabel";
 
 const JobScore = () => {
   const [selectedSkills, setSelectedSkills] = useState([]);
@@ -104,10 +95,6 @@ const JobScore = () => {
     }
   };
 
-  const handleCloseDialog = () => {
-    setOpenDialog(false);
-  };
-
   const indexOfLastJob = currentPage * jobsPerPage;
   const indexOfFirstJob = indexOfLastJob - jobsPerPage;
   const currentJobs = jobData.slice(indexOfFirstJob, indexOfLastJob);
@@ -172,27 +159,6 @@ const JobScore = () => {
       >
         Check my Job Score
       </Button>
-      {/* <Dialog open={openDialog} onClose={handleCloseDialog}>
-        <div className="JobScore-dialogContent">
-          {jobData.length > 0 ? (
-            <div>
-              {jobData.map((job, index) => (
-                <Card key={index} sx={{ marginTop: 2 }}>
-                  <CardContent>
-                    <Typography variant="h6">{job.title}</Typography>
-                    <Typography variant="body2">Company: {job.company}</Typography>
-                    <Typography variant="body2">Location: {job.location}</Typography>
-                    <Typography variant="body2">Eligibility Percentage: {job.eligibility_percentage}</Typography>
-                    <a href={job.job_url} target="_blank" rel="noopener noreferrer">
-                      View Job
-                    </a>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          ) : null}
-        </div>
-      </Dialog> */}
       {jobData && jobData.length > 0 && (
         <React.Fragment>
           <Grid container spacing={3}>
