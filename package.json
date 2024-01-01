@@ -24,13 +24,14 @@
     "react-router-dom": "^6.20.0",
     "react-scripts": "5.0.1",
     "react-slick": "^0.29.0",
+    "serve": "^14.2.1",
     "slick-carousel": "^1.8.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "serve -s build",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "dev": "react-scripts start",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -50,5 +51,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "country-list": "^2.3.0"
   }
 }
