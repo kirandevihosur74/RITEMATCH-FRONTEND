@@ -55,7 +55,7 @@ firebase init
 ```
 Follow the prompts and select the hosting option. Configure the project by choosing the build directory as the public directory.
 
-Step 5: Deploy to Firebase
+### Step 5: Deploy to Firebase
 
 ```bash
 firebase deploy
