@@ -1,8 +1,8 @@
-# React Frontend
+# Ritematch Frontend
 
 ## Description
 
-This React frontend complements the Django backend, providing a user-friendly interface for signing up, signing in, and interacting with job listings. The "Check My Job Score" page reveals job scores based on user-selected skills, utilizing the backend's scoring algorithms.
+The Ritematch frontend complements the Django ritematch backend, providing a user-friendly interface for signing up, signing in, and interacting with job listings. The "Check My Job Score" page reveals job scores based on user-selected skills, utilizing the backend's scoring algorithms.
 
 ## Installation
 
